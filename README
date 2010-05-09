@@ -1,0 +1,51 @@
+DatePretty is a jQuery Plugin offered free of charge (MIT License) created originally by Gabriel Hernandez <admin@webspinnerinc.com>.
+
+USAGE:
+
+For a simple implementation you can use the following:
+
+js:
+$(document).ready(function(){
+    $("#date").datepretty();
+});
+
+html:
+<div id="date">5/10/2010</div>
+Options:
+example
+$(document).ready(function(){
+    $("#date").datepretty({
+        colors:{bg:"#000",fg:"#FFF",bd:"#777"},
+        font:"Helvetica",
+        size: .6
+    });
+});
+
+colors:
+bg : “#222”
+fg : “#ddd”
+bd : “#111”
+p. Colors are set by background(bg), foreground(fg) and border(bd) if bd or bg is not declared they will refer to the other. bg refers to the area that is behind the month and year areas and foreground is the text color for those areas. The date are is a reverse of that. This is entered as a true javascript object eg. color: {bg:“#222”,fg:“#ddd”} ; inside the options object.
+font: “Arial”
+The font name entered in this option will set the font-face style of all the elements.
+
+size: 1
+This is a size multiplier (for larger or smaller badges).
+
+align: “left”
+This sets the float on the wrapper. “none” will take the float off the style.
+
+dates: 1
+This options sets the number of dates to display from the content date. For instance if you wanted to generate badges for the next week you set dates: 7 and have a weeks worth of badges.
+
+space: .5
+This is the number of em margin on each badge. It is set to 0 for calendars (usually).
+
+calendar: false
+This generates a full month calendar for the month/year presented in the content area.
+
+clear: false
+This will force the creation of a div with clear:both in the style immediately after the last element in the set.
+
+days: “short”
+This will use either long or short day descriptions in calendar mode, eg. “Tue” vs. “Tuesday”.
